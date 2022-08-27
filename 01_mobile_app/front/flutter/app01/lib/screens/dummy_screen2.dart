@@ -12,9 +12,31 @@ class DummyScreen2 extends StatelessWidget {
     // final shopName = routeArgs['shopName'];
 
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('DummyScreen2'),
-        ),
-        body: const Text('dummy '));
+      appBar: AppBar(
+        title: const Text('DummyScree n2'),
+      ),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ElevatedButton(
+            onPressed: null,
+            child: const Text('Disabled'),
+          ),
+          const SizedBox(height: 30),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed(
+                '/top',
+                arguments: {
+                  'id': 'param-id',
+                  'title': 'param-title',
+                },
+              );
+            },
+            child: const Text('トップ画面へ'),
+          ),
+        ],
+      ),
+    );
   }
 }

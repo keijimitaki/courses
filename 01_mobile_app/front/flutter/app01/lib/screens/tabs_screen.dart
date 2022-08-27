@@ -4,6 +4,7 @@ import '../widgets/main_drawer.dart';
 // import './favorites_screen.dart';
 // import './categories_screen.dart';
 import './dummy_screen.dart';
+import './dummy_screen2.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _TabsScreenState extends State<TabsScreen> {
       'title': 'Categories',
     },
     {
-      'page': DummyScreen(),
+      'page': DummyScreen2(),
       'title': 'Your Favorite',
     },
   ];
@@ -50,6 +51,7 @@ class _TabsScreenState extends State<TabsScreen> {
             //backgroundColor: Theme.of(context).primaryColor,
             icon: Icon(Icons.category),
             label: 'Categories' as String,
+            // When the user t
           ),
           BottomNavigationBarItem(
             //backgroundColor: Theme.of(context).primaryColor,

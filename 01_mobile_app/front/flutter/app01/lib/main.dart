@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import './screens/top_screen.dart';
+import './screens/top_screen.dart';
 import 'screens/tabs_screen.dart';
 import 'screens/dummy_screen.dart';
 
@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => TabsScreen(),
         '/dummy': (ctx) => DummyScreen(),
+        '/top': (ctx) => TopScreen(),
       },
     );
   }
