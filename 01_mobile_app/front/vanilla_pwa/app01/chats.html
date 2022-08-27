@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>.dev - Everywhere</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <!-- <link rel="stylesheet" href="plane_style.css">
+    <link rel="stylesheet" href="plane_style_bottom.css"> -->
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/navi.css">
+    <link rel="stylesheet" href="css/contents.css">
+
+    <!-- MDB icon -->
+    <link rel="icon" href="css/MDB5-STANDARD-UI-KIT-Free-4.4.0/img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/MDB5-STANDARD-UI-KIT-Free-4.4.0/css/mdb.min.css" />
+    
+    <!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+    <script type="text/javascript">
+      // function openMenu() {
+      //   var elem = document.getElementById('DrawerMenu');
+      //   elem.style.display = 'block';
+      // }
+      // function closeMenu() {
+      //   var elem = document.getElementById('DrawerMenu');
+      //   elem.style.display = 'none';
+      // }
+
+      function gotoSetting() {
+        var elemBack = document.getElementsByClassName('front')[0];
+        elemBack.style.display = 'none';
+        var elemFront = document.getElementsByClassName('adress-edit')[0];
+        elemFront.style.display = 'block';
+        var elemTitle = document.getElementsByClassName('title')[0];
+        elemTitle.innerText  = '設定';
+
+        var elemSideMenu = document.getElementsByClassName('btn-sidemenu')[0];
+        elemSideMenu.style.display = 'none';
+        var elemBtnReturn = document.getElementsByClassName('btn-return')[0];
+        elemBtnReturn.style.display = 'block';
+
+      }
+      function gotoFront() {
+        var elemBack = document.getElementsByClassName('adress-edit')[0];
+        elemBack.style.display = 'none';
+        var elemFront = document.getElementsByClassName('front')[0];
+        elemFront.style.display = 'block';
+
+        var elemTitle = document.getElementsByClassName('title')[0];
+        elemTitle.innerText  = 'トップ';
+
+        var elemSideMenu = document.getElementsByClassName('btn-sidemenu')[0];
+        elemSideMenu.style.display = 'block';
+        var elemBtnReturn = document.getElementsByClassName('btn-return')[0];
+        elemBtnReturn.style.display = 'none';
+      }
+
+      $(document).ready(function() {
+          $('.genre').select2();
+      });
+
+    </script>
+
+</head>
+<body>
+
+  <header>
+    <div id="nav-top">
+
+      <div class="drawer-btn">
+        
+        <div class="btn-sidemenu" style="display:block;">
+          <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+          <label for="menu-toggle" class="menu-button"><span></span></label>
+          <div class="drawer-menu">
+            <ul>
+              <li><a href="#">メニュー1</a></li>
+              <li><a href="#">メニュー2</a></li>
+              <li><a href="#">メニュー3</a></li>
+              <li><a href="#">メニュー4</a></li>
+              <li><a href="#">メニュー5</a></li>
+            </ul>
+          </div>
+          <label for="menu-toggle" class="menu-background"></label>
+        </div>
+
+        <div class="btn-return" style="display:none;">
+          <span><<</span>
+        </div>
+
+      </div>
+
+      <div class="title">
+        タイトル
+      </div>
+      
+      <div class="option-menu">
+        <button onClick="gotoSetting()">設定</button>
+        <button onClick="gotoFront()">Top</button>
+      </div>
+    
+    </div> 
+
+
+  </header>
+
+
+
+  <div>
+
+    <div id="contents">
+      
+      <!-- -->
+      <div class="front" style="display:block;">
+
+        <div style="margin-top:32px;text-align: center;">
+        </div>
+        
+        <div style="margin: 12px; height:80vh;overflow-y: auto;">
+          
+          <div class="chat">
+            <div class="sender">名前</div>
+            <div class="message">
+              ０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９
+            </div>
+          </div>
+
+          <div class="chat">
+            <div class="message">
+              ０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９
+            </div>
+            <div class="sender">名前</div>
+          </div>
+
+          <div class="chat">
+            <div class="message">
+              ０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９
+            </div>
+            <div class="sender">名前</div>
+          </div>
+          <div class="chat">
+            <div class="message">
+              ０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９
+            </div>
+            <div class="sender">名前</div>
+          </div>
+
+          <div class="chat">
+            <div class="sender">名前</div>
+            <div class="message">
+              ０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div style="text-align: right;">
+          <button type="button" class="btn btn-white btn-floating">
+            <i class="fas fa-download"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- -->
+      <div class="adress-edit" style="display:none;">
+        
+        <div style="margin-top:32px;text-align: center;">
+          ああああ<br>
+          せってい<br>
+          ☠🦊
+        </div>
+
+        <div class="input-item">
+          <div class="label">参加者</div>
+          <div class="label">
+            <span>宛先</span>
+            <span><button>グループ</button></span>
+            <span><button>追加</button></span>
+          </div>
+
+          <div class="input">
+            <select name="genre" class="genre" style="width: 50%">
+              <option>和食</option>
+              <option>中華</option>
+              <option>海鮮</option>
+              <option>焼肉</option>
+            </select>
+            <input type="date" style="width:32%"></input>
+            <span class="material-symbols-outlined">delete</span>
+          </div>
+          <div class="input">
+            <select name="genre" class="genre" style="width: 50%">
+              <option>和食</option>
+              <option>中華</option>
+              <option>海鮮</option>
+              <option>焼肉</option>
+            </select>
+            <input type="date" style="width:32%"></input>
+            <span class="material-symbols-outlined">delete</span>
+          </div>
+          <div class="input">
+            <select name="genre" class="genre" style="width: 50%">
+              <option>和食</option>
+              <option>中華</option>
+              <option>海鮮</option>
+              <option>焼肉</option>
+            </select>
+            <input type="date" style="width:32%"></input>
+            <span class="material-symbols-outlined">delete</span>
+          </div>
+
+        </div>
+        
+        <br>
+
+        <div class="input-item">
+          <div class="label">閲覧者</div>
+          <div class="label">
+            <span>宛先</span>
+            <span><button>グループ</button></span>
+            <span><button>追加</button></span>
+          </div>
+
+          <div class="input">
+            <select name="genre" class="genre" style="width: 50%">
+              <option>和食</option>
+              <option>中華</option>
+              <option>海鮮</option>
+              <option>焼肉</option>
+            </select>
+            <input type="date" style="width:32%"></input>
+            <span class="material-symbols-outlined">delete</span>
+          </div>
+          <div class="input">
+            <select name="genre" class="genre" style="width: 50%">
+              <option>和食</option>
+              <option>中華</option>
+              <option>海鮮</option>
+              <option>焼肉</option>
+            </select>
+            <input type="date" style="width:32%"></input>
+            <span class="material-symbols-outlined">delete</span>
+          </div>
+          <div class="input">
+            <select name="genre" class="genre" style="width: 50%">
+              <option>和食</option>
+              <option>中華</option>
+              <option>海鮮</option>
+              <option>焼肉</option>
+            </select>
+            <input type="date" style="width:32%"></input>
+            <span class="material-symbols-outlined">delete</span>
+          </div>
+
+        </div>
+        
+        <!-- ダイアログ -->
+        <a class="btn btn-primary" data-mdb-toggle="modal" href="#exampleModalToggle1" role="button">Open first modal</a>
+
+        <!-- First modal dialog -->
+        <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel1">Modal 1</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <div class="input">
+                  <select name="genre" class="genre" style="width: 50%">
+                    <option>和食</option>
+                    <option>中華</option>
+                    <option>海鮮</option>
+                    <option>焼肉</option>
+                  </select>
+                  <button>検索</button>
+                </div>
+                
+                <div style="margin: 12px; 
+                height:30vh;
+                border: solid 1px #ccc; overflow-y: auto;">
+                <table class="msg-list">
+                  <thead>
+                    <th>
+                      <td>メッセージ</td>
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>メッセージ１</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ２</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ３</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ４</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ５</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ６</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ７</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ８</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ９</td>
+                    </tr>
+                    <tr>
+                      <td>メッセージ１０</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>                
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 
+  <footer>
+    <nav id="nav-bottom">
+      <ul>
+        <li>
+          <span class="iconname">ホーム</span></a>
+        </li>
+        <li>
+          <span class="iconname">メニュー１</span></a>
+        </li>
+        <li>
+          <span class="iconname">メニュー２</span></a>
+        </li>
+      </ul>  
+    </nav>
+  </footer>
+-->
+
+
+  <!-- MDB -->
+  <script type="text/javascript" src="css/MDB5-STANDARD-UI-KIT-Free-4.4.0/js/mdb.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+
+    function bottom_nav_click() {
+        //window.alert('onClicked');
+        const current = document.getElementById("bottom_drawer_contents").style.visibility;
+        console.log(current);
+        let next = 'hidden';
+        if (current === 'hidden') {
+          next = 'visible';
+        }
+        document.getElementById("bottom_drawer_contents").style.visibility = next;
+        // document.getElementById("bottom_drawer_contents").classList.add("open");
+    }
+
+    function bottom_nav_click2() {
+      document.getElementById("b_menu").style.display = "block";
+    }
+
+
+
+  </script>
+
+
+
+</body>
+</html>

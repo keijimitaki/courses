@@ -1,0 +1,30 @@
+.msg-list td {
+  border: 1px #808080 solid; 
+}
+
+.input-item {
+  margin: 8px;
+}
+.input-item .label {
+  text-align: left;
+}
+.input-item .input {
+  /* background-color: antiquewhite; */
+  text-align: left; 
+}
+
+.chat {
+  margin: 8px;
+  display:flex;
+}
+
+.chat .sender {
+  margin: 2px;
+}
+
+.chat .message {
+  margin: 2px;
+  width: 80%;
+  background-color: antiquewhite;
+  border-radius: 8px;
+}

@@ -1,0 +1,48 @@
+
+#bottom_drawer_contents .open{
+	/* animation-name: animation;
+	animation-fill-mode: forwards; */
+}
+
+@keyframes animation/*ここに定義名を記述する*/{
+  0%{
+    bottom:0;
+  }
+  100%{
+    bottom:40;
+  }
+}
+
+
+.menu {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: white;
+	width: 100%;
+	z-index:5000;
+	display:flex;
+	justify-content: center;
+	padding:0;
+	margin:0;
+}
+.menu li {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	padding: 5px;
+	list-style: none;
+	text-align: center;
+}
+.menu a span {
+	display: block;
+	font-size: 4px;
+}
+
+/* 
+@media(min-width: 768px) {
+	.bottom-menu {
+		display: none;
+	}
+}
+ */
