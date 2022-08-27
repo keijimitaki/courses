@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./navi/navi.module').then( m => m.NaviPageModule)
   },
   {
+    path: 'homedetail',
+    loadChildren: () => import('./home/detail/detail.module').then( m => m.DetailPageModule)
+  },  
+  {
     path: '',
     redirectTo: 'navi',
     pathMatch: 'full'
