@@ -9,4 +9,8 @@ export class HomePage {
 
   constructor() {}
 
+  buttonClick(){
+    alert('yes, I do')
+  }
+
 }

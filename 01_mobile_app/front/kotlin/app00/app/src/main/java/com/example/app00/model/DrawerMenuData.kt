@@ -11,21 +11,14 @@ import androidx.compose.ui.unit.dp
 
 sealed class DrawerMenuData(
 
+    val icon: ImageVector? = null,
+    val title: String? = null,
+    val isDivider: Boolean = false,
+    val isHeader: Boolean = false,
 
-    val icon: ImageVector? = null, val title: String? = null,
-    val isDivider: Boolean = false, val isHeader: Boolean = false,
     ){
 
     object AllInboxes: DrawerMenuData(
-
-//        Icon(
-//            modifier = Modifier
-//                .padding(8.dp),
-//            tint = Color.Yellow,
-//            imageVector = Icons.Outlined.Menu,
-//            contentDescription = "Cover"
-//        )
-
         icon = Icons.Outlined.Menu,
         title = "All inboxes"
 

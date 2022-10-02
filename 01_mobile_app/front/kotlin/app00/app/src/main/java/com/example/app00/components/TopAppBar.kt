@@ -24,7 +24,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
+fun TopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
     Box(modifier = Modifier.padding(0.dp),
             ){
         Card(modifier = Modifier.requiredHeight(50.dp),
@@ -55,14 +55,3 @@ fun HomeAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
     }
 }
 
-@Preview
-@Composable
-fun DefaultPreview(){
-    App00Theme() {
-        val scaffoldState = rememberScaffoldState()
-        val coroutineScope = rememberCoroutineScope()
-
-        HomeAppBar(scaffoldState, coroutineScope)
-    }
-
-}

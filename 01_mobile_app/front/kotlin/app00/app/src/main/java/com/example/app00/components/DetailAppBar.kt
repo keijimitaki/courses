@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
@@ -17,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.app00.App
 import com.example.app00.R
 import com.example.app00.ui.theme.App00Theme
@@ -24,7 +26,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
+fun DetailAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope, navController: NavController) {
     Box(modifier = Modifier.padding(0.dp),
             ){
         Card(modifier = Modifier.requiredHeight(50.dp),
@@ -37,32 +39,19 @@ fun HomeAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
                 ) {
                 IconButton(onClick = {
                     scope.launch {
-                        scaffoldState.drawerState.open()
-                        }
+                        navController.navigate(route = "Top")
                     }
+                }
 
                 ) {
-                    Icon(Icons.Default.Menu, contentDescription = "Menu",
+                    Icon(Icons.Default.ArrowBack, contentDescription = "Menu",
                         tint = Color(233,245,219))
 
                 }
-                
+
                 Text(text = "Food ", modifier = Modifier.weight(2.0f) )
 
             }
-
         }
     }
-}
-
-@Preview
-@Composable
-fun DefaultPreview(){
-    App00Theme() {
-        val scaffoldState = rememberScaffoldState()
-        val coroutineScope = rememberCoroutineScope()
-
-        HomeAppBar(scaffoldState, coroutineScope)
-    }
-
 }
