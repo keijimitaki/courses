@@ -74,6 +74,22 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+  /** カスタマイズ **/
+  /*
+  https://ionicframework.com/docs/theming/themes#application-colors
+  */
+  --ion-toolbar-background: #718355;
+  --ion-toolbar-color: #FFFFFF;
+
+  --ion-tab-bar-background: #718355;
+  --ion-tab-bar-background-focused: #718355;
+  --ion-tab-bar-color: #FFFFFF;
+  --ion-tab-bar-color-selected: #E9F5DB;
+
+  
+
 }
 
 @media (prefers-color-scheme: dark) {

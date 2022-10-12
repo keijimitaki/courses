@@ -9,7 +9,11 @@ const routes: Routes = [
   {
     path: 'homedetail',
     loadChildren: () => import('./home/detail/detail.module').then( m => m.DetailPageModule)
-  },  
+  },
+  {
+    path: 'top',
+    loadChildren: () => import('./food/food.module').then( m => m.FoodPageModule)
+  },    
   {
     path: '',
     redirectTo: 'navi',

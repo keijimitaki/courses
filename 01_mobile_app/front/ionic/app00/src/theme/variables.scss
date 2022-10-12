@@ -74,6 +74,28 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+  /** カスタマイズ **/
+  /*
+  https://ionicframework.com/docs/theming/themes#application-colors
+  */
+  --ion-toolbar-background: #718355;
+  --ion-toolbar-color: #FFFFFF;
+
+  --ion-tab-bar-background: #718355;
+  --ion-tab-bar-background-focused: #718355;
+  --ion-tab-bar-color: #FFFFFF;
+  --ion-tab-bar-color-selected: #E9F5DB;
+
+  --ion-color-primary: #E9F5DB;
+  --ion-color-primary-rgb: 233,245,219;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0,0,0;
+  --ion-color-primary-shade: #cdd8c1;
+  --ion-color-primary-tint: #ebf6df;
+
+
 }
 
 @media (prefers-color-scheme: dark) {
