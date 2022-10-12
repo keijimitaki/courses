@@ -1,14 +1,23 @@
 
-import * as React from 'react';
-import { StyleSheet, Text, View ,Button, SafeAreaView, SectionList, StatusBar, FlatList,TextInput } from 'react-native';
+import React, {useState, useEffect} from 'react';
 
+import { StyleSheet, Text, View ,Button, SafeAreaView, SectionList, StatusBar, FlatList,TextInput } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+
+
+import { SettingPage } from '../screens/SettingPage';
+import { TopPage } from '../screens/TopPage';
 import { FOODSHOPS } from '../DummyData';
 
-export const TopPage = ({ navigation }) => {
+
+export const NavContents = ({ navigation }) => {
+
+
+  const Stack = createNativeStackNavigator();
+  const Tab = createBottomTabNavigator();
   
   const DATA = [
     {
@@ -53,6 +62,18 @@ export const TopPage = ({ navigation }) => {
     }    
   ];
 
+  const Item = ({ title }) => (
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+    </View>
+  );
+
+  const press = () => {
+    window.alert('clicked');
+  }
+
+  
+
   const ItemSeparatorView = () => {
     return (
       // Flat List Item Separator
@@ -65,7 +86,8 @@ export const TopPage = ({ navigation }) => {
       />
     );
   };
-  
+
+
 
   const styles = StyleSheet.create({
     container: {
@@ -97,41 +119,38 @@ export const TopPage = ({ navigation }) => {
 
   });
 
+  
   return (
+    
     <>
-    <SafeAreaView style={styles.container}>
-
-
-<FlatList
-  data={FOODSHOPS}
-  keyExtractor={(item, index) => item + index}
-  ItemSeparatorComponent={ItemSeparatorView}
-  renderItem={({ item }) => (
-      <View>
-        <Text style={{ color: 'green' }}>{item.name}</Text>
-        <Text style={{ color: 'red' }} onPress={ (e) => {
-              //alert('Id : ' + item.id + ' Title : ' + item.title);
-              navigation.navigate('Detail',{'shop': item})
-            }}
-            >{item.memo}</Text>
-        <Text style={{ color: 'blue' }}>{item.genre}</Text>
+    
         
-      </View>
-    )}
-  // renderSectionHeader={({ section: { title } }) => (
-  //   <Text style={styles.header} onPress={ (e)=>{ alert(e)} }>{title}</Text>
-  // )}
-/>
-</SafeAreaView>
 
+
+      <Tab.Navigator initialRouteName="TopPage" 
+        screenOptions={{
+          tabBarStyle: { color: 'white' ,backgroundColor: '#718355' }
+          ,tabBarActiveTintColor: 'white'
+          ,tabBarInactiveTintColor: '#E9F5DB'
+      }}
+      >
+        {/* <Tab.Screen name="Top" component={TopPage} options={{ fontSize: '24px' ,textColor: 'white', headerShown: false }}/> */}
+        <Tab.Screen name="Menu1" component={TopPage} options={{ textColor: 'white', headerShown: false }}/>
+        <Tab.Screen name="Menu2" component={SettingPage} options={{ textColor: 'white', headerShown: false }}/>
+      </Tab.Navigator>
 
     </>
-    // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    //   <Text>集計</Text>
-    //   <Button
-    //     title="詳細画面へ"
-    //     onPress={() => navigation.navigate('Detail')}
-    //   />
-    // </View>    
+
+
+
+
   );
+
+
+
+  
 }
+
+
+// https://stackoverflow.com/questions/71832806/search-from-list-in-react-native
+

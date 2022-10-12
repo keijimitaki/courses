@@ -6,9 +6,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import { TopPage } from './screens/TopPage';
+import { NavContents } from './components/NavContents';
 import { DetailPage } from './screens/DetailPage';
-import { SummaryPage } from './screens/SummaryPage';
+import { TopPage } from './screens/TopPage';
 import { SettingPage } from './screens/SettingPage';
 import { DrawerContents } from './components/DrawerContents';
 
