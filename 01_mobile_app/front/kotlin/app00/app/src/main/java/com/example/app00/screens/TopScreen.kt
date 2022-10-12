@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.app00.DummyData
 import com.example.app00.components.DrawerMenu
 import com.example.app00.components.HomeAppBar
 import com.example.app00.components.HomeBottomMenu
@@ -26,18 +27,8 @@ fun TopScreen(navController: NavController){
     val coroutineScope = rememberCoroutineScope()
     val scrollState = rememberScrollState()
 
-    val foodShopList = listOf(
-        FoodShop("c1", "河童ラーメン本舗 枚方店", "麺","2021-05-05", rating = 3.5, "テスト" ),
-        FoodShop("c2", "東京純豆腐 くずはモール店", "韓国料理",null, rating = null ,"" ),
-        FoodShop("c3", "はま寿司 松井山手店", "寿司",null, rating = null ,""),
-        FoodShop("c4", "香の川製麺 枚方招提店", "麺","2021-10-04", rating = 4.1 ,""),
-        FoodShop("c5", "牛たん専門店せんり 枚方店", "和食",null, rating = null ,""),
-        FoodShop("c6", "ふぐ・うなぎ料理 玄品 楠葉", "和食",null, rating = null ,""),
-        FoodShop("c7", "とろ穴子と鰻 対馬厳原 枚方", "和食",null, rating = null ,""),
-        FoodShop("c8", "インド料理 LUMBINI 枚方店", "インド料理","2021-08-20", rating = 4.0 ,""),
-        FoodShop("c9", "オイスターハウスカイ", "イタリア料理",null, rating = null ,""),
-        FoodShop("c10", "Basic Waffle", "デザート",null, rating = null ,""),
-    )
+    val dummyData = DummyData()
+    val foodShopList = dummyData.getAllFoodShops()
 
     Scaffold(
         scaffoldState = scaffoldState,
@@ -54,7 +45,7 @@ fun TopScreen(navController: NavController){
                             .padding(10.dp)
                             .fillMaxWidth()
                             .clickable {
-                                navController.navigate(route = "Detail")
+                                navController.navigate(route = "Detail/${foodShopList[index].id}")
                             },
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween,

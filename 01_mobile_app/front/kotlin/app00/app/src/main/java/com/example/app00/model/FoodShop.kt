@@ -13,12 +13,12 @@ class FoodShop {
     val lastUsedDate: String?
     val memo: String?
 
-    constructor(id: String, name: String, genre: String?, lastUsedDate: String?, rating: Double?, memo: String?) {
+    constructor(id: String, name: String, genre: String?, rating: Double?, lastUsedDate: String?, memo: String?) {
         this.id = id
         this.name = name
         this.genre = genre
-        this.lastUsedDate = lastUsedDate
         this.rating = rating
+        this.lastUsedDate = lastUsedDate
         this.memo = memo
     }
 
