@@ -13,7 +13,11 @@ export const DrawerContents = ({ navigation }) => {
 
   const Drawer = createDrawerNavigator();
 
-  return (
+    {/*
+   https://reactnavigation.org/docs/5.x/drawer-navigator/
+    */}
+    return (
+
     <Drawer.Navigator initialRouteName="NavContents" 
       screenOptions={{
         headerStyle: { backgroundColor: '#718355' }
@@ -22,16 +26,20 @@ export const DrawerContents = ({ navigation }) => {
         ,drawerStyle: {
           backgroundColor: '#B5C99A'
           ,drawerItemStyle: {
-            color: 'white'
+            color: 'blue'
           }
+          ,paddingTop: 80
+         
         }
         ,drawerActiveTintColor : '#718355'   
-        ,drawerInactiveTintColor : 'white'   
-    }}>
+        ,drawerInactiveTintColor : 'white'
+      }}
 
-      <Drawer.Screen name="Top" component={NavContents} options={{ headerShown: true }} />
-      <Drawer.Screen name="Drawer1" component={DrawerMenu1}  />
-      <Drawer.Screen name="Drawer2" component={DrawerMenu2} />
+    >
+
+      <Drawer.Screen name="Top" component={NavContents} options={{ headerShown: true, drawerLabel: 'ドロワーメニュー 1' }} />
+      <Drawer.Screen name="Drawer1" component={DrawerMenu1} options={{ drawerLabel: 'ドロワーメニュー 2' }} />
+      <Drawer.Screen name="Drawer2" component={DrawerMenu2} options={{ drawerLabel: 'ドロワーメニュー 3' }}/>
     </Drawer.Navigator>
   );
 }

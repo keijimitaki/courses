@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { TopPage } from '../screens/TopPage';
 import { FOODSHOPS } from '../DummyData';
@@ -134,8 +134,18 @@ export const NavContents = ({ navigation }) => {
       }}
       >
         {/* <Tab.Screen name="Top" component={TopPage} options={{ fontSize: '24px' ,textColor: 'white', headerShown: false }}/> */}
-        <Tab.Screen name="Menu1" component={TopPage} options={{ textColor: 'white', headerShown: false }}/>
-        <Tab.Screen name="Menu2" component={TopPage} options={{ textColor: 'white', headerShown: false }}/>
+        <Tab.Screen name="Menu1" component={TopPage} options={{ 
+          textColor: 'white', headerShown: false, 
+          tabBarLabel: 'メニュー1',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="apps-sharp" color={color} size={size} />
+          ),}}/>
+        <Tab.Screen name="Menu2" component={TopPage} options={{ 
+          textColor: 'white', headerShown: false, 
+          tabBarLabel: 'メニュー2',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="apps-sharp" color={color} size={size} />
+          ),}}/>
       </Tab.Navigator>
 
     </>
