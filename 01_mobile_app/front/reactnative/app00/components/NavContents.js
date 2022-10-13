@@ -8,7 +8,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 
-import { SettingPage } from '../screens/SettingPage';
 import { TopPage } from '../screens/TopPage';
 import { FOODSHOPS } from '../DummyData';
 
@@ -136,7 +135,7 @@ export const NavContents = ({ navigation }) => {
       >
         {/* <Tab.Screen name="Top" component={TopPage} options={{ fontSize: '24px' ,textColor: 'white', headerShown: false }}/> */}
         <Tab.Screen name="Menu1" component={TopPage} options={{ textColor: 'white', headerShown: false }}/>
-        <Tab.Screen name="Menu2" component={SettingPage} options={{ textColor: 'white', headerShown: false }}/>
+        <Tab.Screen name="Menu2" component={TopPage} options={{ textColor: 'white', headerShown: false }}/>
       </Tab.Navigator>
 
     </>

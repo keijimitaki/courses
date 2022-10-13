@@ -1,23 +1,38 @@
 
 import * as React from 'react';
-import { StyleSheet, Text, View ,Button } from 'react-native';
+import { Text, View } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+export const DetailPage = ({ route }) => {
 
-export const DetailPage = ({ navigation, route }) => {
-
-  const shopName = route.params.shop.name;
+  const shop = route.params.shop;
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>詳細{shopName}</Text>
-      <Button
-        title="戻る"
-        onPress={() => navigation.navigate('Drawer')}
-      />
-    </View>      
+    <View style={{ margin: 48 }}>
+      <Text style={{ fontSize: 16, marginTop: 40 }}>
+        <Text style={{ fontWeight: "bold" }}>名前 : </Text>    
+        <Text>{shop.name}</Text>
+      </Text>
+      
+      <Text style={{ fontSize: 16, marginTop: 40 }}>
+        <Text style={{ fontWeight: "bold" }}>点数 : </Text>    
+        <Text>{shop.rating}</Text>      
+      </Text>
+
+      <Text style={{ fontSize: 16, marginTop: 40 }}>
+        <Text style={{ fontWeight: "bold" }}>ジャンル : </Text>    
+        <Text>{shop.genre}</Text>      
+      </Text>
+
+      <Text style={{ fontSize: 16, marginTop: 40 }}>
+        <Text style={{ fontWeight: "bold" }}>最終利用 : </Text>    
+        <Text>{shop.lastUsedDate}</Text>      
+      </Text>
+
+      <Text style={{ fontSize: 16, marginTop: 40 }}>
+        <Text style={{ fontWeight: "bold" }}>メモ : </Text>    
+        <Text>{shop.memo}</Text>      
+      </Text>
+
+    </View>
   );
 }

@@ -9,7 +9,6 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavContents } from './components/NavContents';
 import { DetailPage } from './screens/DetailPage';
 import { TopPage } from './screens/TopPage';
-import { SettingPage } from './screens/SettingPage';
 import { DrawerContents } from './components/DrawerContents';
 
 
