@@ -19,7 +19,17 @@ export class TopPage {
 
   toDetail(id:string) {
     // this.router.navigateByUrl('/tabs', {replaceUrl: true});
-    const data = {name: 'abc', id: id};
+    const selectedShop = this.shops.filter((shop, index, array) => {
+      return (array[index]['id'] == id)
+    })
+    const data = {
+      id: id,
+      name: selectedShop[0]['name'], 
+      rating: selectedShop[0]['rating'], 
+      genre: selectedShop[0]['genre'], 
+      lastUsedDate: selectedShop[0]['lastUsedDate'], 
+      memo: selectedShop[0]['memo'], 
+    };
     const navData: NavigationExtras = {
       queryParams: {
         data: JSON.stringify(data)

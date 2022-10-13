@@ -2,7 +2,7 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title>single-item : id = {{paramId}}</ion-title>
+    <ion-title>DETAIL</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/top"></ion-back-button>
     </ion-buttons>
@@ -12,9 +12,45 @@
 
 <ion-content [fullscreen]="true">
 <div id="container">
-  <strong>Yeah </strong>
-  <span>🐘🦁🦛</span>
-  <span> {{paramId}}</span>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="ion-text-start" style="padding-left:16%;padding-top:1rem;">
+          <span style="font-weight: bold;">名前 :</span> {{name}}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start" style="padding-left:16%;padding-top:1rem;">
+          <span style="font-weight: bold;">点数 :</span> {{rating}}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start" style="padding-left:16%;padding-top:1rem;">
+          <span style="font-weight: bold;">ジャンル :</span> {{genre}}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start" style="padding-left:16%;padding-top:1rem;">
+          <span style="font-weight: bold;">最終利用 :</span> {{lastUsedDate}}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start" style="padding:0 8% 0 16%;padding-top:1rem;">
+          <span style="font-weight: bold;">メモ :</span> {{memo}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </div>
 
 </ion-content>

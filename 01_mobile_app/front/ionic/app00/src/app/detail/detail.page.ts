@@ -9,24 +9,28 @@ import { NavParams } from '@ionic/angular';
 })
 export class DetailPage implements OnInit{
 
-  paramId:string;
-  
+  id:string;
+  name:string;
+  rating:string;
+  genre:string;
+  lastUsedDate:string;
+  memo:string;
+
   constructor(private route: ActivatedRoute) {}
-  //constructor() {}
 
   ngOnInit(): void {
-      // this.route.paramMap.subscribe(paramMap => {
-      //   //this.paramId = paramMap.get('data');
-      // });
-      // this.paramId = this.navParams.get('data');
-      
       
       const selectedShop = this.route.snapshot.queryParams;
       console.log('queryparams: ', selectedShop);
 
       const data = JSON.parse(selectedShop.data);
-      this.paramId = data.id;
-      console.log('paramId: ', this.paramId);
+      this.id = data.id;
+      this.name = data.name;
+      this.rating = data.rating;
+      this.genre = data.genre;
+      this.lastUsedDate = data.lastUsedDate;
+      this.memo = data.memo;
+      console.log('paramId: ', this.id);
 
   }
 

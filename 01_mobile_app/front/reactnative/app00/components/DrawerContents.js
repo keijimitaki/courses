@@ -24,12 +24,7 @@ export const DrawerContents = ({ navigation }) => {
         ,headerTintColor: '#E9F5DB'
         ,contentStyle: { backgroundColor: 'white' }
         ,drawerStyle: {
-          backgroundColor: '#B5C99A'
-          ,drawerItemStyle: {
-            color: 'blue'
-          }
-          ,paddingTop: 80
-         
+          backgroundColor: '#B5C99A'         
         }
         ,drawerActiveTintColor : '#718355'   
         ,drawerInactiveTintColor : 'white'
@@ -37,7 +32,7 @@ export const DrawerContents = ({ navigation }) => {
 
     >
 
-      <Drawer.Screen name="Top" component={NavContents} options={{ headerShown: true, drawerLabel: 'ドロワーメニュー 1' }} />
+      <Drawer.Screen name="TOP" component={NavContents} options={{ headerShown: true, drawerLabel: 'ドロワーメニュー 1' }} />
       <Drawer.Screen name="Drawer1" component={DrawerMenu1} options={{ drawerLabel: 'ドロワーメニュー 2' }} />
       <Drawer.Screen name="Drawer2" component={DrawerMenu2} options={{ drawerLabel: 'ドロワーメニュー 3' }}/>
     </Drawer.Navigator>

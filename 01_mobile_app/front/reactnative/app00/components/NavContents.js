@@ -136,13 +136,13 @@ export const NavContents = ({ navigation }) => {
         {/* <Tab.Screen name="Top" component={TopPage} options={{ fontSize: '24px' ,textColor: 'white', headerShown: false }}/> */}
         <Tab.Screen name="Menu1" component={TopPage} options={{ 
           textColor: 'white', headerShown: false, 
-          tabBarLabel: 'メニュー1',
+          tabBarLabel: 'メニュー 1',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="apps-sharp" color={color} size={size} />
           ),}}/>
         <Tab.Screen name="Menu2" component={TopPage} options={{ 
           textColor: 'white', headerShown: false, 
-          tabBarLabel: 'メニュー2',
+          tabBarLabel: 'メニュー 2',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="apps-sharp" color={color} size={size} />
           ),}}/>

@@ -14,58 +14,39 @@
 
 
 <!-- List of Sliding Items -->
-<div style="height:50vh;overflow-y:scroll;">
-  <ion-list>
-    <ion-item-sliding>
-
-      <ion-item button (click)="buttonClick()">
-        <ion-label>
-          <h1>H1 Heading</h1>
-          <p>Paragraph</p>
-        </ion-label>
-      </ion-item>
-
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item>
-        <ion-item button (click)="toDetail(2)">
-          <ion-label>
-            <h1>To Detail</h1>
-            <p>Paragraph</p>
-          </ion-label>
-        </ion-item>
-  
-        <ion-label>Item</ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option (click)="toDetail(2)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  
-  </ion-list>
+<div style="height:80vh;overflow-y:scroll;">
 
     <ion-list>
-      <ion-item *ngFor ="let shop of shops" >
-        <ion-label>
-          <p>{{shop.name}}</p>
-          <p>{{shop.lastUsedDate}}</p>
+      <ion-item *ngFor ="let shop of shops" button (click)="toDetail(shop.id)">
+        <ion-label >
+          <ion-row style="display:flex;justify-content: space-between; margin-top:8px;font-size:small;">
+            <div>{{shop.name}}</div>             
+            <div>点数 : {{shop.rating}}</div>        
+          </ion-row>
+          <ion-row style="display:flex;justify-content: space-between; margin-top:8px;font-size:small;">
+            <div>ジャンル : {{shop.genre}}</div>
+            <div>最終利用 : {{shop.lastUsedDate}}</div>
+          </ion-row>
+          <ion-row style="display:flex;margin-top:8px;font-size:small;">
+            <div>{{shop.memo}}</div>
+          </ion-row>
         </ion-label>
+
       </ion-item> 
     </ion-list> 
 
   </div>
 
-<ion-content>
+<ion-content >
     <ion-tabs>     
-      <ion-tab-bar slot="bottom">
+      <ion-tab-bar slot="bottom" >
         <ion-tab-button tab="bottom_tab_menu1">
           <ion-icon color="primary" name="apps-sharp"></ion-icon>
-          <ion-label color="primary">Menu1</ion-label>
+          <ion-label color="primary">メニュー 1</ion-label>
         </ion-tab-button>
         <ion-tab-button tab="bottom_tab_menu2">
           <ion-icon color="primary" name="apps-sharp"></ion-icon>
-          <ion-label color="primary">Menu2</ion-label>
+          <ion-label color="primary">メニュー 2</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
