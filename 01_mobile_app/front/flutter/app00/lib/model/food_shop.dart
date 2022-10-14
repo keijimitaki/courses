@@ -4,15 +4,15 @@ class FoodShop {
   final String id;
   final String name;
   final String? genre;
-  final String? lastUsed;
-  final num? rating;
+  final String? lastUsedDate;
+  final String? rating;
   final String? memo;
 
   FoodShop({
     required this.id,
     required this.name,
     this.genre,
-    this.lastUsed,
+    this.lastUsedDate,
     this.rating,
     this.memo,
   });

@@ -26,7 +26,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun TopBottomMenu() {
+fun HomeBottomMenu() {
     val menuList = listOf(
         BottomMenuData.Email,
         BottomMenuData.Face,

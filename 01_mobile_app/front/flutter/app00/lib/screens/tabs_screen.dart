@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../widgets/main_drawer.dart';
-// import './favorites_screen.dart';
-// import './categories_screen.dart';
-import './dummy_screen.dart';
-import './top_screen.dart';
+import 'top_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -15,12 +12,12 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, Object>> _pages = [
     {
-      'page': DummyScreen(),
-      'title': 'Categories',
+      'page': TopScreen(),
+      'title': 'Menu 1',
     },
     {
-      'page': DummyScreen(),
-      'title': 'Your Favorite',
+      'page': TopScreen(),
+      'title': 'Menu 2',
     },
   ];
   int _selectedPageIndex = 0;
@@ -36,7 +33,7 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         //title: Text(_pages[_selectedPageIndex]['title']),
-        title: const Text('title'),
+        title: const Text('TOP'),
         backgroundColor: Color(0xFF718355),
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.white,
@@ -58,14 +55,14 @@ class _TabsScreenState extends State<TabsScreen> {
         items: [
           BottomNavigationBarItem(
             //backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.category),
-            label: 'Categories' as String,
+            icon: Icon(Icons.apps_sharp),
+            label: 'メニュー 1' as String,
             // When the user t
           ),
           BottomNavigationBarItem(
             //backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.star),
-            label: 'Favorites' as String,
+            icon: Icon(Icons.apps_sharp),
+            label: 'メニュー 2' as String,
           ),
         ],
       ),

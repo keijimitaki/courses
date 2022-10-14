@@ -22,76 +22,23 @@ import com.example.app00.model.DrawerMenuData
 @Composable
 fun DrawerMenu(scrollState: ScrollState){
 
-    val menuList = listOf(
-        DrawerMenuData.AllInboxes,
-        DrawerMenuData.Divider,
-        DrawerMenuData.Primary,
-        DrawerMenuData.HeaderOne,
-        DrawerMenuData.Social,
-        DrawerMenuData.AccountBox,
-        DrawerMenuData.Build,
-        DrawerMenuData.Create,
-        DrawerMenuData.Face,
-        DrawerMenuData.Divider,
-        DrawerMenuData.HeaderOne,
-        DrawerMenuData.Back,
-        DrawerMenuData.Social,
-        DrawerMenuData.AccountBox,
-        DrawerMenuData.Build,
-        DrawerMenuData.Create,
-        DrawerMenuData.Face,
-    )
-
     Column(
         Modifier
-            .verticalScroll(scrollState)
-            .background(color = Color(181, 201, 154))) {
-        Text(text = "App", color = Color.White,
-            modifier = Modifier
-                .padding(start = 20.dp, top = 20.dp),
-            fontSize = 20.sp,
-            fontWeight = FontWeight.Bold)
-        menuList.forEach{
-            item ->
-            when{
-                item.isDivider ->{
-                    Divider(modifier = Modifier.padding(bottom = 20.dp, top = 20.dp))
-                }
-                item.isHeader ->{
-                    Text(text = item.title!!, fontWeight = FontWeight.Light,
-                        modifier = Modifier.padding(start = 20.dp, bottom = 20.dp,top=20.dp)
-                        ,color = Color.White)
-                
-                } else ->
-            {
-                AppDrawerItem(item = item)
-            }
-            }
-        }
-    }
-}
-
-@Composable
-fun AppDrawerItem(item: DrawerMenuData) {
-    Row(
-        modifier = Modifier
+//            .verticalScroll(scrollState)
             .fillMaxWidth()
-            .height(50.dp)
-            .padding(top = 16.dp)
-    ){
-//        val d:ImageVector = item.icon!!
-//        d(
-//            tint = Color.Yellow,
-//        )
-            Image(imageVector = item.icon!!,
-                contentDescription = item.title!!,
-                modifier = Modifier.weight(weight = 0.5f),
-                colorFilter = ColorFilter.tint(
-                    Color(233,245,219),
-                    BlendMode.SrcIn)
+            .fillMaxHeight()
+            .background(color = Color(181, 201, 154))) {
 
-            )
-            Text(text = item.title, modifier = Modifier.weight(weight = 2.0f),color = Color.White)
+        Text(text = "ドロワーメニュー 1", fontWeight = FontWeight.Light,
+            modifier = Modifier.padding(start = 20.dp, bottom = 20.dp,top=60.dp)
+            ,color = Color.White)
+        Text(text = "ドロワーメニュー 2", fontWeight = FontWeight.Light,
+            modifier = Modifier.padding(start = 20.dp, bottom = 20.dp,top=20.dp)
+            ,color = Color.White)
+        Text(text = "ドロワーメニュー 3", fontWeight = FontWeight.Light,
+            modifier = Modifier.padding(start = 20.dp, bottom = 20.dp,top=20.dp)
+            ,color = Color.White)
 
     }
 }
+

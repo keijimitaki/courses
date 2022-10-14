@@ -61,13 +61,13 @@ fun App() {
         },
         bottomBar = { HomeBottomMenu()}
     ) {
-        LazyColumn{
-            items(count = 50){
-                    index ->
-                Text(text = "Index @ $index")
-                Divider()
-            }
-        }
+//        LazyColumn{
+//            items(count = 0){
+//                    index ->
+//                Text(text = "Index @ $index")
+//                Divider()
+//            }
+//        }
     }
 
 }

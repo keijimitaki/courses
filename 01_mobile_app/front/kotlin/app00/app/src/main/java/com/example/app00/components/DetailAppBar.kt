@@ -19,7 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.app00.App
+//import com.example.app00.App
 import com.example.app00.R
 import com.example.app00.ui.theme.App00Theme
 import kotlinx.coroutines.CoroutineScope
@@ -49,7 +49,7 @@ fun DetailAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope, navControl
 
                 }
 
-                Text(text = "Food ", modifier = Modifier.weight(2.0f) )
+                Text(text = "DETAIL", modifier = Modifier.weight(2.0f) ,color = Color(233,245,219))
 
             }
         }

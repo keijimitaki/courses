@@ -18,6 +18,7 @@ sealed class DrawerMenuData(
 
     ){
 
+
     object AllInboxes: DrawerMenuData(
         icon = Icons.Outlined.Menu,
         title = "All inboxes"

@@ -10,12 +10,12 @@ sealed class BottomMenuData(
     ){
 
     object Email: BottomMenuData(
-        icon = Icons.Outlined.Email,
-        title = "Email"
+        icon = Icons.Outlined.Apps,
+        title = "メニュー 1"
     )
     object Face: BottomMenuData(
-        icon = Icons.Outlined.Face,
-        title = "Face"
+        icon = Icons.Outlined.Apps,
+        title = "メニュー 2"
     )
 
 }

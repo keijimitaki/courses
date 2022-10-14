@@ -42,7 +42,7 @@ fun TopScreen(navController: NavController){
                 items(count = foodShopList.size) { index ->
                     Row(
                         modifier = Modifier
-                            .padding(10.dp)
+                            .padding(vertical = 16.dp , horizontal = 24.dp)
                             .fillMaxWidth()
                             .clickable {
                                 navController.navigate(route = "Detail/${foodShopList[index].id}")
@@ -52,17 +52,34 @@ fun TopScreen(navController: NavController){
 
                         ) {
                         Text(text = foodShopList[index].name, fontWeight = FontWeight.SemiBold)
-                        Text(text = "Index @ $index", fontWeight = FontWeight.SemiBold)
+                        Text(text = "点数 : ${foodShopList[index].rating}")
                     }
+                    Row(
+                        modifier = Modifier
+                            .padding(vertical = 8.dp , horizontal = 24.dp)
+                            .fillMaxWidth()
+                            .clickable {
+                                navController.navigate(route = "Detail/${foodShopList[index].id}")
+                            },
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween,
 
+                        ) {
+                        Text(text = "ジャンル : ${foodShopList[index].genre}")
+                        Text(text = "最終利用 : ${foodShopList[index].lastUsedDate}")
+                    }
+                    Row(
+                        modifier = Modifier
+                            .padding(top = 8.dp, bottom = 32.dp)
+                            .fillMaxWidth()
+                            .clickable {
+                                navController.navigate(route = "Detail/${foodShopList[index].id}")
+                            },
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween,
 
-                    Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(text = "Index @ $index", fontWeight = FontWeight.SemiBold)
-                        Button(onClick = {
-                            //navController.navigate(route = "Detail")
-                        }) {
-                            Text(text = "Go to Derail Screen")
-                        }
+                        ) {
+                        foodShopList[index].memo?.let { it1 -> Text(text = it1) }
                     }
                     Divider()
                 }
