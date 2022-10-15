@@ -70,7 +70,7 @@ fun TopScreen(navController: NavController){
                     }
                     Row(
                         modifier = Modifier
-                            .padding(top = 8.dp, bottom = 32.dp)
+                            .padding(top = 8.dp, bottom = 32.dp,start = 24.dp, end=24.dp)
                             .fillMaxWidth()
                             .clickable {
                                 navController.navigate(route = "Detail/${foodShopList[index].id}")
